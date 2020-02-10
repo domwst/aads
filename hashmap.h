@@ -112,7 +112,7 @@ public:
         buckets[h].push_front({key, ValueType()});
         ++cur_size;
         if (trySizeUp()) {
-            return this->operator[](key);
+            return operator[](key);
         }
         return buckets[h].front().second;
     }
